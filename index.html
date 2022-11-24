@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculette JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+      
+        <div class="title">
+            <h1>Calculette pratique</h1>
+            <p>Faites vos calculs en quelques clicks</p>
+        </div>
+
+
+        <div class="tabcontainer">
+          <div class="tab">
+            <button class="tablinks multiplication" id="defaultOpen">Multiplication</button>
+            <button class="tablinks addition">Addition</button>
+            <button class="tablinks soustraction">Soustraction</button>
+            <button class="tablinks division">Division</button>
+          </div>
+
+          <div id="multi" class="tabcontent">
+            <h3>Multiplication</h3>
+            <div class="radio-group">
+              <input type="radio" name="produit" id="simple" checked>
+              <label for="simple">Multiplication simple</label>
+              <input type="radio" name="produit" id="table">
+              <label for="table">Table de multiplication</label>
+            </div>
+
+            <div class="form-container multiSimple">
+              <form class="simple">
+                <label for="nombre">Entrez le nombre à multiplier :</label><br>
+                <input type="number" name="nombre" id="nb1"><br><br>
+                <label for="nombre">Multiplié par :</label><br>
+                <input type="number" name="nombre" id="nb2"><br><br>
+                <input type="submit" value="Calculer">
+                <input type="reset" value="Effacer" class="effacer">
+              </form>
+              <div class="resultsOperation resultSimple">
+                <button class="deletehistory-btn histomultisimple-btn">Effacer l'historique</button>
+                <h4 class="previewResults prevMultisimple">Les résultats s'affichent ici</h4>
+              </div>
+            </div>
+            
+            <div class="form-container multiTable">
+              <form class="table">
+                <label for="nombre">Entrez le nombre pour afficher sa table de multiplication :</label><br>
+                <input type="number" name="nombre" id="nb3"><br><br>
+                <label for="nombre">Multiplié jusqu'à :</label><br>
+                <input type="number" name="nombre" id="nb4"><br><br>
+                <input type="submit" value="Calculer">
+                <input type="reset" value="Effacer">
+              </form>
+              <div class="resultsOperation resultTable">
+                <button class="deletehistory-btn histomultitable-btn">Effacer l'historique</button>
+                <h4 class="previewResults prevMultiTable">Les résultats s'affichent ici</h4>
+              </div>
+            </div>
+          </div>
+        
+          <div id="add" class="tabcontent">
+            <h3>Addition</h3>
+            <div class="form-container">
+              <form class="formAdd">
+                <div class="addInput-container">
+                  <label for="nombreAddition">Votre nombre :</label><br>
+                  <input type="number" name="nombreAddition" class="firstNumberAdd"><br>
+                  <label for="nombreAddition">Plus votre nombre :</label><br>
+                  <input type="number" name="nombreAddition" class="secondNumberAdd"><br>
+                </div>
+                <input type="button" value="+" class="addinput" title="Ajouter un champs">
+                <input type="submit" value="Calculer">
+                <input type="reset" value="Effacer">
+                
+              </form>
+              <div class="resultsOperation resultAddition">
+                <button class="deletehistory-btn histoaddition-btn">Effacer l'historique</button>
+                <h4 class="previewResults prevAddition">Les résultats s'affichent ici</h4>
+              </div>
+            </div> 
+          </div>
+        
+          <div id="sous" class="tabcontent">
+            <h3>Soustraction</h3>
+
+            <div class="form-container">
+              <form class="formSous">
+                <label for="nombreSoustraction">Entrez un nombre :</label><br>
+                <input type="number" name="nombreSoustraction" class="firstNumberSous"><br><br>
+
+                <label for="nombreSoustraction">Moins :</label><br>
+                <input type="number" name="nombreSoustraction" class="secondNumberSous"><br><br>
+
+                <input type="submit" value="Calculer">
+                <input type="reset" value="Effacer">
+              </form>
+              <div class="resultsOperation resultSoustraction">
+                <button class="deletehistory-btn histosoustraction-btn">Effacer l'historique</button>
+                <h4 class="previewResults prevSoustraction">Les résultats s'affichent ici</h4>
+              </div>
+            </div>
+
+          </div>
+
+          <div id="div" class="tabcontent">
+            <h3>Division</h3>
+            <div class="form-container">
+              <form class="formDiv">
+                <label for="nombreDivision">Entrez un nombre :</label><br>
+                <input type="number" name="nombreDivision" class="firstNumberDiv"><br><br>
+
+                <label for="nombreDivision">Diviser par :</label><br>
+                <input type="number" name="nombreDivision" class="secondNumberDiv"><br><br>
+
+                <input type="submit" value="Calculer">
+                <input type="reset" value="Effacer">
+              </form>
+              <div class="resultsOperation resultDivision">
+                <button class="deletehistory-btn histodivision-btn">Effacer l'historique</button>
+                <h4 class="previewResults prevDivision">Les résultats s'affichent ici</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
